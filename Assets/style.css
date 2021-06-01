@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+@import "css_reset.css";
+@import "header.css";
+@import "aside_menu.css";
+@import "slider.css";
+@import "top_track__container.css";
+@import "featured_tracks.css";
+@import "main_player.css";
+
+.page__wrapper {
+    position: relative;
+    max-width: 1500px;
+    height: 100vh;
+    overflow-y: hidden;
+    box-sizing: border-box;
+    font: normal 600 12px/16px Source Sans Pro, sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+@media (max-width: 414px) {
+    .page__wrapper {
+        height: 812px;
+    }
+}
+
+@media (min-width: 1500px) {
+    .page__wrapper {
+        max-height: 1080px;
+        margin: 0 auto;
+        border: 1px solid #EEEEEE;
+    }
+}
+
+@media (min-width: 415px) and (max-width: 1300px) {
+    .page__wrapper {
+        height: 870px;
+        overflow-y: scroll;
+    }
+}
+
+    .main {
+    position: relative;
+    /*позиционирование задано, чтобы внутри main предсказуемо себя вел еще один позиционированный
+    элемент - блок с проигрывателем. Но при этом для main не задаю положение через top и left, потому что
+    тогда проявляется странный эффект - перестает работать overflow у одного из дочерних элементов и
+    весь main растягиваетсяс на ширину контента - блока featured tracks*/
+    margin: 0 0 0 170px;
+    border-left: 1px solid #EEEEEE;
+    box-sizing: border-box;
+}
+
+@media (min-width: 320px) and (max-width: 414px) {
+    .main {
+        margin-left: 0;
+    }
+}
+
+.player__container {
+    position: relative;
+    background: url("Img/back_player.png") no-repeat;
+    background-size: cover;
+    padding: 24px 0 0 22px;
+}
+
+.player__container h3, .player__container h4 {
+    margin-bottom: 13px;
+    font: normal 600 16px/22px Source Sans Pro, sans-serif;
+}
+
+.player__container h4 {
+    margin-bottom: 0;
+}
+
+
+

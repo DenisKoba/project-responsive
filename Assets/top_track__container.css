@@ -1,0 +1,181 @@
+.top_tracks__wrapper {
+    padding-right: 27px;
+}
+
+.top_tracks__container {
+    overflow-y: scroll;
+}
+
+@media (min-width: 415px) {
+    .top_tracks__container {
+        max-height: 20vh;
+    }
+}
+
+@media (max-width: 414px) {
+    .top_tracks__container {
+        height: 75vh;
+    }
+}
+
+@media (min-width: 1500px) {
+    .top_tracks__container {
+        max-height: 490px;
+    }
+}
+
+.track_row {
+    display: flex;
+    padding: 13px 0;
+}
+
+.track_row:not(.heading_row) {
+    font: normal 400 12px/16px Source Sans Pro, sans-serif;
+    opacity: 0.5;
+}
+
+@media (min-width: 415px) {
+    /*поскольку у мобильной и десктопной версии по-разному огразинован отклик на наведение и нажатие
+    сразу выделяю десктопный способ в отдельный медиа-запрос*/
+    .track_row:hover:not(.heading_row) {
+        background: url("Img/Voice_recorder.png") 7px center no-repeat, #FFFFFF;
+        opacity: 1;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, .25);
+        border-radius: 3px;
+    }
+
+    .track_row:hover:not(.heading_row) .col_1 span {
+        visibility: hidden;
+    }
+}
+
+.col_1 {
+    width: 18%;
+    display: flex;
+    justify-content: left;
+    flex-wrap: nowrap;
+}
+
+.heading_row .col_1 {
+    padding-left: 17px;
+}
+
+.col_1 span {
+    margin: 0 41px 0 17px;
+}
+
+.col_2 {
+    width: 19%;
+    padding-left: 17px;
+}
+
+.col_3 {
+    width: 20%;
+    padding-left: 17px;
+}
+
+.col_4 {
+    width: 13%;
+    padding-left: 17px;
+}
+
+.col_5 {
+    width: 10%;
+    padding-left: 17px;
+}
+
+.col_6 {
+    width: 20%;
+    padding-left: 17px;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.col_6 img:nth-child(1) {
+    margin-right: 32px;
+}
+
+.col_6 img:nth-child(2) {
+    margin-right: 46px;
+}
+
+.col_7 {
+    display: none;
+}
+
+@media (min-width: 415px) {
+    /*скрываю из десктопной версии все элементы, созданные исключительно для мобильной версии, и
+    выделенные в отдельный класс*/
+    .mobile {
+        display: none;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 414px) {
+    .desktop {
+        display: none;
+    }
+
+    .mobile {
+        display: block;
+    }
+
+    .top_tracks__container .track_row {
+        opacity: 1;
+    }
+
+    .col_1 {
+        width: 20%;
+    }
+
+    .col_2 {
+        display: flex;
+        flex-flow: column;
+        width: 60%;
+        padding-left: 5px;
+        justify-content: center;
+    }
+
+    .artist_name {
+        font: normal 500 14px/16px Roboto;
+        color: #0F1E36;
+    }
+
+    .artist_fit {
+        font: normal 400 12px/14px Roboto;
+        color: #545663;
+    }
+
+    .col_5 {
+        width: 20%;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+    }
+
+    .track_row:hover .col_1 {
+        display: none;
+    }
+
+
+    .track_row:hover .col_2 {
+        width: 40%;
+    }
+
+
+    .track_row:hover .col_7 {
+        display: block;
+    }
+
+    .track_row:hover .col_7 {
+        width: 40%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-content: center;
+    }
+
+    .track_row:hover .col_7 img {
+        object-fit: none;
+    }
+}

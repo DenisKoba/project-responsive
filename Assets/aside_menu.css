@@ -1,0 +1,58 @@
+
+.aside__menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 170px;
+    height: 100vh;
+    padding: 23px 0 0 0;
+}
+
+.logo {
+    margin: 0 0 44px 25px;
+}
+
+.aside__menu_wrapper {
+    padding: 0 21px 0 30px;
+}
+
+.aside__menu h3 {
+    font: normal 600 12px/16px Source Sans Pro, sans-serif;
+    margin: 0 0 18px 0;
+}
+
+.aside__menu ul li {
+    margin-bottom: 24px;
+    opacity: 0.5;
+}
+
+.aside__menu ul li span {
+    /* единственный способ, который придумал, чтобы выровнять текст относительно иконок в меню*/
+    position: relative;
+    left: 14px;
+    bottom: 3px;
+}
+
+.play_list_heading {
+    /*иконку "+" подключаю фоном, к ней все равно можно будет обращаться кликом на
+    всю область блока h3*/
+    background: url("Img/Plus.svg") 105px center no-repeat;
+}
+
+.aside__menu li:hover,
+.aside__menu h3:hover,
+.aside__menu_discover > :first-child {
+    /* в макете первый пункт в меню, discover, выделен активным, сделал также,
+    для схожести с макетом. Ежинственное, что не делал - изменение цвета иконок, но судя по
+    самим иконкам, это не предусмотрено: e discover сама по себе синяя, у остальных - черные*/
+    color: #3E2AD1;
+    opacity: 1;
+    cursor: pointer;
+}
+
+@media (min-width: 320px) and (max-width: 414px) {
+    .aside__menu {
+        display: none;
+    }
+}

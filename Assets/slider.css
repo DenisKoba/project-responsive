@@ -1,0 +1,112 @@
+
+.slider {
+    position: relative;
+    padding: 92px 0 48px 8%;
+    background: url("Img/Photo_1.png") no-repeat;
+    background-size: cover;
+    color: #FFFFFF;
+}
+
+.slider h2 {
+    font: normal 600 28px/30px Source Sans Pro, sans-serif;
+    text-transform: capitalize;
+    margin-bottom: 7px;
+}
+
+.slider h3 {
+    font: normal 600 10px/14px Source Sans Pro, sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 7px;
+}
+
+.slider h4 {
+    font: normal 600 16px/14px Source Sans Pro, sans-serif;
+    margin-bottom: 43px;
+}
+
+.button {
+    border: none;
+    border-radius: 3px;
+    box-shadow: 0 2px 8px #BC1428;
+    vertical-align: text-top;
+    cursor: pointer;
+}
+
+.play {
+    padding: 4px 25px 4px 15px;
+    background: url("Img/Play.svg") 41px center no-repeat, #FFFFFF;
+    font: normal 600 10px/14px Source Sans Pro, sans-serif;
+    text-transform: uppercase;
+    color: #E6152B;
+}
+
+.share {
+    width: 24px;
+    height: 22px;
+    background: url("Img/Share.svg") center center no-repeat, #FFFFFF;
+    margin-left: 3px;
+}
+
+.pagination__wrapper {
+    position: absolute;
+    left: calc(50% - 36px);
+    bottom: 9px;
+}
+
+.pagination {
+    display: inline-block;
+    width: 16px;
+    height: 5px;
+    background: url("Img/Pagination.png") no-repeat;
+    background-size: contain;
+}
+
+.pagination__wrapper :nth-child(2), .pagination:hover {
+    background: url("Img/Pagination_active.png") no-repeat;
+}
+
+@media (min-width: 1014px) and (max-width: 2000px) {
+    .mobile {
+        display: none;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 414px) {
+    .slider {
+        background: url("Img/Photo_1.png") 43% no-repeat;
+        background-size: cover;
+        padding: 111px 8% 29px 8%;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    .mobile {
+        display: block;
+    }
+
+    .status_bar {
+        position: absolute;
+        top: 19px;
+        right: 8%;
+        left: 8%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font: normal 400 14px/18px Source Sans Pro, sans-serif;
+    }
+
+    .status_icons_wrapper {
+        width: 72px;
+        height: 12px;
+        background: url("Img/Cellular Connection.svg") 0 center no-repeat,
+        url("Img/Wifi.svg") 23px center no-repeat,
+        url("Img/Battery.svg") 46px center no-repeat;
+    }
+
+    .mobile_menu {
+        position: absolute;
+        top: 58px;
+    }
+}

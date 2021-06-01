@@ -1,0 +1,30 @@
+
+.featured_tracks {
+    height: 173px;
+    /*задаю высоту чуть больше высоты потомков блока, чтобы не было переполнения и
+    не появлеляся эффект вертикального скролла, он появляется из-за того, что даже скрытый
+    горизонтальный скролл немного забирает высоты блока*/
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-flow: nowrap;
+    overflow-x: scroll;
+}
+
+.track_item {
+    flex-shrink: 0;
+    object-fit: none;
+    width: 112px;
+    height: 154px;
+    margin-right: 20px;
+}
+
+.track_item h5 {
+    font: normal 600 12px/26px Source Sans Pro, sans-serif;
+}
+
+.track_item h6 {
+    font: normal 600 10px/14px Source Sans Pro, sans-serif;
+    opacity: 0.48;
+}
+
